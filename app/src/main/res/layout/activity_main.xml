@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/heading_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="MAD_Animation_Practical"
+        android:textSize="25sp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardElevation="20dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/heading_1">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="3dp">
+            <ImageView
+                android:id="@+id/image_1"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:src="@drawable/alarm_animation_list"
+                android:scaleType="centerCrop"/>
+            <TextView
+                android:id="@+id/create_alaram_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Create Alram Time"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                android:layout_marginTop="260dp"
+                android:layout_marginStart="10dp"
+                app:layout_constraintStart_toStartOf="@id/image_1"
+                app:layout_constraintTop_toTopOf="@id/image_1"
+
+                />
+
+            <TextView
+                android:id="@+id/text_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:text="By pressing button,Alaram can be Created and
+                cancelled"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@id/create_alaram_time"
+                app:layout_constraintTop_toBottomOf="@id/create_alaram_time" />
+
+            <TextView
+                android:id="@+id/text_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:text="Chech current time by looking below real digital clock."
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@id/create_alaram_time"
+                app:layout_constraintTop_toBottomOf="@id/text_1"
+                />
+
+            <TextClock
+                android:id="@+id/text_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="24sp"
+                android:layout_marginTop="25dp"
+                android:textColor="@color/black"
+                android:format12Hour="hh:mm:ss a MMM d,yyyy"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/text_2"
+                app:layout_constraintEnd_toEndOf="parent"
+                />
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/create_alarm_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/text_3"
+                android:text="Create Alram"
+                android:backgroundTint="#34ADE2"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"
+                app:icon="@drawable/alarm_outlined_alert_clock_icon"
+                app:iconGravity="textStart"
+                app:iconPadding="8dp"
+                />
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cancel_alram"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@id/create_alarm_button"
+                app:layout_constraintTop_toBottomOf="@id/text_3"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="20dp">
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+
+
+                <ImageView
+                    android:id="@+id/cancel_clock"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/cancel_alarm_1"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:padding="8dp"
+                    />
+
+                    <TextView
+                        android:id="@+id/text_4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Cancle Alram"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/cancel_clock"
+                        android:textSize="16sp"
+                        android:textColor="#34ADE2"
+                        android:padding="8dp"
+                        />
+
+
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.card.MaterialCardView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+</androidx.constraintlayout.widget.ConstraintLayout>
