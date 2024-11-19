@@ -74,27 +74,27 @@
                 app:layout_constraintTop_toBottomOf="@id/text_1"
                 />
 
-            <TextClock
-                android:id="@+id/text_3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="24sp"
+            <ImageView
+                android:id="@+id/image_2"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
                 android:layout_marginTop="25dp"
-                android:textColor="@color/black"
-                android:format12Hour="hh:mm:ss a MMM d,yyyy"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/text_2"
+                android:layout_marginEnd="20dp"
                 app:layout_constraintEnd_toEndOf="parent"
-                />
+                app:layout_constraintTop_toBottomOf="@id/text_2"
+                android:src="@drawable/heart_animation_list"
+                android:scaleType="centerCrop"/>
+
+
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/create_alarm_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/text_3"
+                app:layout_constraintTop_toBottomOf="@id/image_2"
                 android:text="Create Alram"
                 android:backgroundTint="#34ADE2"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="25dp"
                 android:layout_marginLeft="20dp"
                 app:icon="@drawable/alarm_outlined_alert_clock_icon"
                 app:iconGravity="textStart"
@@ -105,9 +105,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:layout_constraintStart_toEndOf="@id/create_alarm_button"
-                app:layout_constraintTop_toBottomOf="@id/text_3"
+                app:layout_constraintTop_toBottomOf="@id/image_2"
                 android:layout_marginLeft="20dp"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="25dp"
                 app:cardCornerRadius="20dp"
                 app:cardElevation="20dp">
                 <androidx.constraintlayout.widget.ConstraintLayout

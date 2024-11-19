@@ -23,6 +23,12 @@ class MainActivity : AppCompatActivity() {
         val animationDrawable1 = imageView1.drawable as AnimationDrawable
         animationDrawable1.start()
 
+        //image_2
+        val imageView2: ImageView = findViewById(R.id.image_2)
+        val animationDrawable2 = imageView2.drawable as AnimationDrawable
+        animationDrawable2.start()
+
+
 
 
     }
